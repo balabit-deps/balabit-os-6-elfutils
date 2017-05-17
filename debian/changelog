@@ -1,3 +1,53 @@
+elfutils (0.165-3ubuntu1.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Denial of service via invalid memory read when handling
+    crafted ELF files
+    - debian/patches/CVE-2016-10254.patch: Always set ELF maxsize when reading
+      an ELF file for sanity checks. Based on upstream patch.
+    - CVE-2016-10254
+  * SECURITY UPDATE: Denial of service via memory consumption when handling
+    crafted ELF files
+    - debian/patches/CVE-2016-10255.patch: Sanity check offset and size before
+      trying to malloc and read data. Based on upstream patch.
+    - CVE-2016-10255
+  * SECURITY UPDATE: Denial of service via invalid memory read when handling
+    crafted ELF files
+    - debian/patches/CVE-2017-7607.patch: Fix off by one sanity check in
+      handle_gnu_hash. Based on upstream patch.
+    - CVE-2017-7607
+  * SECURITY UPDATE: Denial of service via invalid memory read when handling
+    crafted ELF files
+    - debian/patches/CVE-2017-7608.patch: Use the empty string for note names
+      with zero size. Based on upstream patch.
+    - CVE-2017-7608
+  * SECURITY UPDATE: Denial of service via memory consumption when handling
+    crafted ELF files
+    - debian/patches/CVE-2017-7609.patch: Check compression ratio before
+      trying to allocate output buffer. Based on upstream patch.
+    - CVE-2017-7609
+  * SECURITY UPDATE: Denial of service via invalid memory read when handling
+    crafted ELF files
+    - debian/patches/CVE-2017-7610.patch: Don't check section group without
+      flags word. Based on upstream patch.
+    - CVE-2017-7610
+  * SECURITY UPDATE: Denial of service via invalid memory read when handling
+    crafted ELF files
+    - debian/patches/CVE-2017-7611.patch: Check symbol table data is big
+      enough before checking. Based on upstream patch.
+    - CVE-2017-7611
+  * SECURITY UPDATE: Denial of service via invalid memory read when handling
+    crafted ELF files
+    - debian/patches/CVE-2017-7612.patch: Don't trust sh_entsize when checking
+      hash sections. Based on upstream patch.
+    - CVE-2017-7612
+  * SECURITY UPDATE: Denial of service via memory consumption when handling
+    crafted ELF files
+    - debian/patches/CVE-2017-7613.patch: Sanity check the number of phdrs and
+      shdrs available. Based on upstream patch.
+    - CVE-2017-7613
+
+ -- Tyler Hicks <tyhicks@canonical.com>  Wed, 17 May 2017 23:27:15 +0000
+
 elfutils (0.165-3ubuntu1) xenial; urgency=medium
 
   * Fix finding the debug info for Ubuntu kernels (Mark Wielaard). LP: #1537125.
